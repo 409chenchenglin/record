@@ -19,9 +19,11 @@ int main()
 		y=y+pow(x,n);
 		d=d%c;
 		c=c/10;
+		if(c==0){
 		if(y==i){
 			printf("%d\n",y);
 			break;
+		}
 		}
 	}
 	 }
