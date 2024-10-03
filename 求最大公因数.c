@@ -2,7 +2,7 @@
 int main()
 {
 	int x,y,a,t,n;
-	printf("ÊäÈëÁ½¸öÕýÕûÊý");
+	printf("è¯·è¾“å…¥2ä¸ªæ•´æ•°");
 	scanf("%d%d",&x,&y); 
 	
 	if(x>y){
