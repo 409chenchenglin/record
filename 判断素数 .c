@@ -3,8 +3,11 @@ int main()
 {
 	int i,x;
 	int isprime=1;
-	printf("ÊäÈëÒ»¸öÕıÕûÊı");
+	printf("è¾“å…¥ä¸€ä¸ªæ­£æ•´æ•°");
 	scanf("%d",&x);
+		if(x=1) {
+		isprime=0;
+	}
 	for(i=2;i<x;i++){
 		if(x%i==0){
 			isprime=0;
@@ -12,9 +15,9 @@ int main()
 		}
 		}
 			if(isprime==0){
-				printf("²»ÊÇËØÊı"); 
+				printf("ä¸æ˜¯ç´ æ•°"); 
 			}else{
-				printf("ÊÇËØÊı");
+				printf("æ˜¯ç´ æ•°");
 			
 			} 
 	 return 0; 
