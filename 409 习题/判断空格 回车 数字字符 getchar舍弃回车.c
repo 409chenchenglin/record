@@ -16,7 +16,7 @@ int main(){
 				z++;
 			}
 		}
-	}
+	
 	printf("blank=%d, digit=%d,other=%d",x,y,z);
 	return 0;
 } 
