@@ -10,10 +10,9 @@ int main(){
 		scanf("%c",&ch);
 		if((ch==' ')||(ch=='\n')){
 			x++;
-		}else{
-			if(ch>='0'&&ch<='9'){
+		}else if(ch>='0'&&ch<='9'){
 				y++;
-			}else{
+		}else{
 				z++;
 			}
 		}
