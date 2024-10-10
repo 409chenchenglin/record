@@ -14,7 +14,11 @@ int main()
 			c++;
 		} 
 	}
-}
-	printf("%d",c+1);
+	}
+	if(c!=0){
+		printf("%d",c+1);
+	}else{
+		printf("%d",c);
+	}
 	return 0;
 }
