@@ -24,6 +24,7 @@ int main()
 				break;
 			 default:
 			 	printf("0.0");
+			 	break;
 		}
 	}
 	return 0;
