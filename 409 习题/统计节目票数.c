@@ -38,7 +38,6 @@ int main()
 				
 		}
 	}
-	printf("\n");
 	printf("1 %d\n",one);
 	printf("2 %d\n",two);
 	printf("3 %d\n",three);
