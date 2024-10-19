@@ -2,24 +2,16 @@
 int main()
 {
 	char ch;
-	int j;
-	scanf("%c",&ch);
+	ch=getchar();
 	while(ch!='\n'){
-	j=1;
 	if(ch>='a'&&ch<='z'){
-	   printf("%c",ch-32);
-	   j=0;
+	   ch=ch-32;
 	}else if(ch>='A'&&ch<='Z'){
-		printf("%c",ch+32); 
-		j=0;
+		ch=ch+32; 
+	}
+	putchar(ch);
+	ch=getchar();
 	}
 
-    if(j==1){
-	printf("%c",ch);
-	}
-
-	scanf("%c",&ch);
-	}
 	return 0;
 }
-
