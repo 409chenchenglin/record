@@ -2,7 +2,7 @@
 int main()
 {
 	char ch;
-	ch=getchar();
+	ch=getchar(); 
 	while(ch!='\n'){
 	if(ch>='a'&&ch<='z'){
 	   ch=ch-32;
