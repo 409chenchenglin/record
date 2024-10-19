@@ -1,15 +1,11 @@
 #include<stdio.h>
 int main()
 {
-	int cnt=0,i,offset;
+	int cnt=0,i=0,offset;
 	char code[80];
-	code[0]=getchar();
-	for(i=0;code[i]!='\n';i++){
-		if(i==79){
-			break; 
-		} 
-		code[i+1]=getchar();
+	while((code[i]=getchar())!='\n'&&i<80){
 		cnt++; 
+		i++;
 	}
 	
 	scanf("%d",&offset);
