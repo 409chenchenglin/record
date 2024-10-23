@@ -14,7 +14,7 @@ int countdigit(int number,int digit)
 	if(number<0){
 		number=-number;
 	}
-//	ÎªÁË´¦Àí 0 0µÄÇé¿ö ËùÒÔĞ´ÁË 18 19 20 21 µÄ´úÂë 
+//	ä¸ºäº†å¤„ç† 0 0çš„æƒ…å†µ æ‰€ä»¥å†™äº† 18 19 20 21 çš„ä»£ç  
 	if(number==digit)
 	{
 		cnt++;
