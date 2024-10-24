@@ -11,10 +11,9 @@ int main()
 	}
 	printf("calculated by array, sum = %ld\n",sum);
 	sum=0;
-	int *p;
+	int *p=number;
 	for(i=0;i<n;i++){
-		p=&number[i];
-		sum=sum+*p;
+		sum=sum+*p++;
 	}
 	printf("calculated by pointer, sum = %ld\n",sum);
 	return 0;
