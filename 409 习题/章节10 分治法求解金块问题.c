@@ -46,10 +46,10 @@ int min(int a[],int i,int n)
 		k=(i+n)/2;
 		r1=min(a,i,k);
 		r2=min (a,k+1,n);
-		if(r1>r2){
-			result=r2;
-		}else{
+		if(r1<r2){
 			result=r1;
+		}else{
+			result=r2;
 		}
 	}
 	return result;
