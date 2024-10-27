@@ -21,7 +21,7 @@ int max(int a[],int i,int n)
 	int r1,r2;
 	if(i==n){
 		result=a[i];
-//		return i;
+//		return [i];
 	}else{
 		k=(i+n)/2;
 		r1=max(a,i,k);
