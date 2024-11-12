@@ -10,3 +10,19 @@
 # 组成4位数是7*8*8*4个。
 #
 # ......
+n=int(input("请输入一个正整数 决定构成奇数的最高位数:"))
+total=0
+s=0
+for i in range(1,n+1):
+    if i==1:
+        s=4
+        total+=s
+    elif i==2:
+        s=4*7
+        total+=s
+    else:
+        s*=8
+        #也可以写成s=4*7*8**(i-2) 但上面的应该能省一点计算量
+        total+=s
+    print(f"构成{i}位数的奇数有{s}个")
+print(f"sum={total}")
