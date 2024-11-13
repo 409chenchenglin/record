@@ -15,7 +15,7 @@ int main()
 	int k,l;
 	int cnt;
 	int is_found=0;
-	int hang_max=a[0][0];
+	int hang_max;
 	int hang=0,lie=0;
 	if(n==1){
 		printf("0 0");
@@ -23,6 +23,7 @@ int main()
 			for(i=0;i<n;i++)
 			{
 				cnt=0;
+				hang_max=a[i][0]; 
 				for(j=0;j<n;j++)
 				{
 					if(a[i][j]>hang_max)
