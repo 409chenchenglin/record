@@ -1,5 +1,5 @@
 #include<stdio.h>
-void search(int list[],int n,int x);
+int search(int list[],int n,int x);
 int main()
 {
 	int i,x,n;
@@ -9,37 +9,27 @@ int main()
 	{
 		scanf("%d",&a[i]);
 	 } 
-	 
-//	 int len=sizeof(a)/sizeof(a[0]);
-
-	scanf("%d",&x);
-	search(a,n,x);
+	 int len=sizeof(a)/sizeof(a[0]);
+	 scanf("%d",&x);
+	 if(search(a,len,x)!=-1){
+	 printf("index=%d",search(a,len,x));
+	 }else{
+	 	printf("Not found");
+	 }
 	return 0;
 }
 
-void search(int list[],int n,int x)
+int search(int list[],int n,int x)
 {
 	int i,ret;
-	int is_found=0;
-	ret=0;
+	ret=-1;
 	for(i=0;i<n;i++)
 	{
 		if(x==list[i])
 		{
-			is_found=1;
 			ret=i;
 			break;
 		}
 	}
-	
-	if(is_found==1)
-	{
-		printf("index=%d",ret);
-	}else{
-		printf("Not found");
-	}
-	
+	return ret;
 }
-
-
-
