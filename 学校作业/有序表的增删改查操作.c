@@ -3,9 +3,10 @@ void Insert(int*a,int num,int n);
 void Delete(int*a,int index,int n);
 void Modify(int*a,int index,int num,int n);
 void Query(int*a,int num,int n);
+int n;//全局变量 
 int main()
 {
-	int i,n;
+	int i;
 	int a[200];
 	scanf("%d",&n);
 	for(i=0;i<n;i++){
@@ -27,7 +28,6 @@ int main()
 		}else if(x==2){
 			scanf("%d",&index);
 			Delete(a,index,n);
-			n--;
 		}else if(x==3){
 			scanf("%d %d",&index,&num);
 			Modify(a,index,num,n);
@@ -42,7 +42,7 @@ int main()
 void Insert(int*a,int num,int n){
 	int i;
 	for(i=n-1;i>=0;i--){
-		if(num<a[0]){
+		if(num<=a[0]){
 			int index;
 			for(index=n;index>0;index--){
 				a[index]=a[index-1];
@@ -50,7 +50,7 @@ void Insert(int*a,int num,int n){
 			a[0]=num;
 			break;
 		}
-		if(num>a[i]){
+		if(num>=a[i]){
 			if(i==n-1){
 				a[i+1]=num; 
 			}else{
@@ -72,31 +72,41 @@ void Insert(int*a,int num,int n){
 
 void Delete(int*a,int index,int n){
 	int i;
-	for(i=index+1;i<n;i++){
-		a[i-1]=a[i];
+	if(index<=n-1){
+		for(i=index+1;i<n;i++){
+			a[i-1]=a[i];
+		}
+		for(i=0;i<n-1;i++){
+			printf("%d ",a[i]);
+		}
+		printf("\n");
+		n--;
+	}else{
+		printf("%d\n",-1);
 	}
-	for(i=0;i<n-1;i++){
-		printf("%d ",a[i]);
-	}
-	printf("\n");
+	
 }
 
 
 void Modify(int*a,int index,int num,int n){
- 	a[index]=num;
- 	int i,j;
- 	for(i=0;i<n-1;i++){
- 		for(j=i+1;j<n;j++){
- 			if(a[j]<a[i]){
- 				int temp=a[j];
- 				a[j]=a[i];
- 				a[i]=temp;
-			 }
-		 }	
-	 }
-	 for(i=0;i<n;i++){
-	 	printf("%d ",a[i]);
-	 }
+	if(index<=n-1){
+	 	a[index]=num;
+	 	int i,j;
+	 	for(i=0;i<n-1;i++){
+	 		for(j=i+1;j<n;j++){
+	 			if(a[j]<a[i]){
+	 				int temp=a[j];
+	 				a[j]=a[i];
+	 				a[i]=temp;
+				 }
+			 }	
+		 }
+		 for(i=0;i<n;i++){
+		 	printf("%d ",a[i]);
+		 }
+	}else{
+		printf("-1\n");
+	}
 	 printf("\n");
  }
  
